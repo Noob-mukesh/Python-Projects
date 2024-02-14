@@ -1,7 +1,20 @@
 
 # Foundations of Hacking and Pentesting Android Apps
-
 import requests
+
+def download_lecture(urls):
+    
+    for index ,url in enumerate(urls,index=1):
+        
+    response = requests.get(url,allow_redirect=True)
+    
+    with open(f"video{index}.mp4", 'wb') as f:
+        
+        f.write(response.content)
+        
+    print('all lecture  downloaded successfully')
+    
+download_lecture(urls)
 urls= [
 'https://mp4-c.udemycdn.com/2020-04-21_00-08-25-c6cf95b334aa6bb13487ec0aa7993b5d/WebHD_720p.mp4?Expires=1707900457&Signature=k2QT3IwFtAz0~n-vqkCuZDQzQWFJQ4dBJmFOpl0gK6FRf4QMleCu39ra2SyM1h-qlzys9IGRWHT2OuYf-XfPd6rAnmB3lYDuwEK0BJAAXeFJilHfsmeV60rKij03TzMWxwtIRsOrTsNw3nK-RqOcRqo6KTBEgcDcff19B~iFZ0AvH1fYSeuowcn0eJQXl6YG7~YtfsphBhFHV-GTzbsnpym5Eozi5~q6ftO31Rqwjz4kE42OW7FSmNhgNYFcPUBmpBKOYMoGcKlvtM8u-jEdBfqN2cj84Y-DW2BwESPUMGIm3Tj4cwQINx1P-zWmL-Eqx31K3Fq-3Jaz2oxx6TV02Q__&Key-Pair-Id=K3MG148K9RIRF4',
 "https://mp4-c.udemycdn.com/2020-04-21_00-13-24-09c97883630f51d9db59f5cb74be6c2b/WebHD_480.mp4?Expires=1707900785&Signature=HTAnoBF5zKCtCNoFNVmFexukz9CfwF6eL8jmvMKJnkhnXEY9EKws3jv88CiQulX0KZM3G0gF6nmARjD6slcIab7RhoZ7PoUd66K2aScQfTjQ2PpYtN-Ct-NQOmlDwPjb7Z4RRnBsUe1AExvYAQOZKaAzwmpYmcDZtgVP7h6wIQbOlLZ~jiL2K9RSzFHcWzABCoA5ni5BK~QJqUuu~xBYnTROPeLXpWV7Ch-julrzntu-0320YCEzvQ~fzSfVtwU6A5SH8-8OEWrkjkZCT1r7V1VMxE8m1nbNwTR0SFdbKTvs26jYegO0lW70Dcc0VkTT6XJn8MjtT9iJbd2XSH4btA__&Key-Pair-Id=K3MG148K9RIRF4",
@@ -19,13 +32,6 @@ urls= [
 "https://mp4-c.udemycdn.com/2020-04-21_00-45-50-5355f83302ad122340c97f2bffce9578/WebHD_720p.mp4?Expires=1707902373&Signature=d6Kj5qQIyLV237vYaVju4ufCwEyY5BhGn8X3VyjFkBIkC0pE5vPmAA~kOZPvYZ7fpF~coiYaHx77QdgwK-6MNRHa1KumElDbGSS~aiBVgVMORKen1dE-8ihML0-c1tt4pZ12TzQkjt0TFGphjvlmgcTPGrSwOosVgg63wVxkBUd6909Ond4T6FTAZdjAdUych1Rx~dOsasJ2ru97VZltaBfRLjdW8ei5891piHBFWGOMRiQv6AzwzAPJOKsIsJJsHyH6ZEqM3uOkHPfdHCTeVVwcZsQULcZWN48P1DyBVEY1ZACPSju-5gbpmoc5C25HrjNwK56YlWAt67Uk8OiXog__&Key-Pair-Id=K3MG148K9RIRF4",
 "https://mp4-c.udemycdn.com/2020-04-21_00-49-43-4bb641b31e737c6c3c49ced9d4cdf5d1/WebHD_720p.mp4?Expires=1707902394&Signature=d4JUtxI2qe2K8TFsUroia7nwjVSQo1KwZ-pRa-R-2B1OvbhIWzcGy2lEnN7uQFAQUB0C5rBPfEsENZWpi1Nuu9VYTrwUDiSbMBMUrTBPvQoj4ga9myT4TO9g9o6ZDtN~ziQBiwb7MnBCnQelcqC4ZNJLy99f4~HVNv~T2zlNHjkuRmGhlobCFFv5RSblGoC3mqpV~KrNo05S5~5wTvXt5UXwTPGBOovbZ8xUra0ooqyFAIV98Gq4QEsJKspVeTrgg3nhsCM~dr4-XqIQaWyTm5nPxcvomOZix0VMisHEkc1WR32n~q6drede1Tmbf0p9HmaqmpBVkxahNgDwDIaXcA__&Key-Pair-Id=K3MG148K9RIRF4"
 ]
-
-for index ,url in enumerate(urls,index=1):
-    response = requests.get(url,allow_redirect=True)
-    with open(f"video{index}.mp4", 'wb') as f:
-        f.write(response.content)
-    print('Video downloaded successfully')
-
 """Learn More For Free!
 Want to learn more about programming, security, and low level programming? Check out our free resources!
 
