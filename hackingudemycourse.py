@@ -4,7 +4,7 @@ import requests
 
 def download_lecture(urls):
     
-    for index ,url in enumerate(urls,index=1):
+    for index ,url in enumerate(urls,start=1):
         
     response = requests.get(url,allow_redirect=True)
     
