@@ -1,4 +1,5 @@
 <!--  credit w3 schools -->
+<img src="python.jpg" alt="python img" width="50%" >
 
 # What is Python?
 
@@ -55,3 +56,4 @@ Python relies on indentation, using whitespace, to define scope; such as the sco
 
 <h1>Click the link below to view the Python file:</h1>
     <a href="day1.py" target="_blank">View Python File</a>
+<!-- C:\Users\mukes\Downloads\Python-Projects\Day1 -->
