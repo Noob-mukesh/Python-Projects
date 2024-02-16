@@ -5,8 +5,7 @@ import requests
 def download_lecture(urls):
     
     for index ,url in enumerate(urls,start=1):
-        
-    response = requests.get(url,allow_redirect=True)
+        response = requests.get(url)
     
     with open(f"video{index}.mp4", 'wb') as f:
         
